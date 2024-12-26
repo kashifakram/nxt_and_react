@@ -5,7 +5,7 @@ import ThemeToggler from "@/comps/themetoggler";
 import { useTheme } from "./contexts/themecontext";
 import { useState } from "react";
 
-export default function Page({ children }) {
+export default function Page() {
   const [count, setCount] = useState(0);
 
   const handleClicked = () => {
@@ -18,7 +18,7 @@ export default function Page({ children }) {
   return !cnt ? (
     <>
       <h1>Manual Next.JS</h1>
-      {children}
+
       <Button
         isPrimary={true}
         text="Primary Button Example"
