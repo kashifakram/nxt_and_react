@@ -1,33 +1,47 @@
-'use client'
+"use client";
 import Button from "@/comps/button";
-import Image from 'next/image';
-import ThemeToggler from '@/comps/themetoggler'; 
-import { useTheme } from './contexts/themecontext';
+import Image from "next/image";
+import ThemeToggler from "@/comps/themetoggler";
+import { useTheme } from "./contexts/themecontext";
 import { useState } from "react";
 
-export default function Page({children}: {children: React.ReactNode}) {
-    const [count, setCount] = useState(0);
-    
-    const handleClicked = (showing?: string) => {
-        setCount(count + 1)
-        alert(`Hey I'm showing and clicked ${count + 1} times`)
-    }
+export default function Page({ children }: { children: React.ReactNode }) {
+  const [count, setCount] = useState(0);
 
-  const cnt = false
+  const handleClicked = () => {
+    setCount(count + 1);
+    alert(`Hey I'm showing and clicked ${count + 1} times`);
+  };
+
+  const cnt = false;
   const { theme } = useTheme();
   return !cnt ? (
     <>
       <h1>Manual Next.JS</h1>
       {children}
-      <Button isPrimary={true} text="Primary Button Example" onClick={handleClicked} counter={count}>
+      <Button
+        isPrimary={true}
+        text="Primary Button Example"
+        onClick={handleClicked}
+        counter={count}
+      >
         <h2>This is child</h2>
       </Button>
-      <Button isPrimary={false} text="Secondary Button Example" onClick={handleClicked} counter={count}>
+      <Button
+        isPrimary={false}
+        text="Secondary Button Example"
+        onClick={handleClicked}
+        counter={count}
+      >
         <h2>This is secondary child</h2>
       </Button>
     </>
   ) : (
-    <div className={`flex min-h-screen flex-col items-center justify-between p-24 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+    <div
+      className={`flex min-h-screen flex-col items-center justify-between p-24 ${
+        theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"
+      }`}
+    >
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p>
           Get started by editing&nbsp;
@@ -40,7 +54,7 @@ export default function Page({children}: {children: React.ReactNode}) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}<br />
+            By <br />
             <Image
               src="/18.jpg"
               alt="Vercel Logo"
@@ -55,5 +69,5 @@ export default function Page({children}: {children: React.ReactNode}) {
       <br />
       <ThemeToggler />
     </div>
-  )
+  );
 }
