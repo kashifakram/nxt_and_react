@@ -1,7 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/(content)/tasks/page": "app/(content)/tasks/page.js",
-  "/(content)/blog/[[...slug]]/page": "app/(content)/blog/[[...slug]]/page.js",
-  "/(content)/headings/page": "app/(content)/headings/page.js",
-  "/(content)/dashboard/page": "app/(content)/dashboard/page.js"
-}

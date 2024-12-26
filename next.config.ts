@@ -4,6 +4,7 @@ const config: NextConfig = {
     experimental: {
         reactCompiler: true
     },
+    output: 'export',
     images: {
         remotePatterns: [
             {
