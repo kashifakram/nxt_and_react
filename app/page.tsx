@@ -5,7 +5,7 @@ import ThemeToggler from "@/comps/themetoggler";
 import { useTheme } from "./contexts/themecontext";
 import { useState } from "react";
 
-export default function Page({ children }: { children: React.ReactNode }) {
+export default function Page({ children }) {
   const [count, setCount] = useState(0);
 
   const handleClicked = () => {
