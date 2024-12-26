@@ -32,8 +32,7 @@
     ]
   },
   "include": [
-    "next-env.d.ts",
-, "app/_components/ui/Tasks.jsx", "app/_components/TaskList.jsx", "app/_components/reducer.jsx", ".next/types/**/*.ts",
+    "next-env.d.ts", "app/_components/ui/Tasks.jsx", "app/_components/TaskList.jsx", "app/_components/reducer.jsx", ".next/types **/*.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
