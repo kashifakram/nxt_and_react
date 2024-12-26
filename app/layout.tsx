@@ -2,7 +2,6 @@ import { Geist } from "next/font/google";
 import Link from "next/link";
 import "./styles/global.scss";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "./contexts/themecontext"; // Path alias
 
 const geist = Geist({
   subsets: ["latin"],
@@ -46,7 +45,7 @@ export default function RootLayout({ children }) {
         </header>
         <main>
           <h3>Main Starting Point</h3>
-          <ThemeProvider>{children}</ThemeProvider>
+          {children}
         </main>
       </body>
     </html>

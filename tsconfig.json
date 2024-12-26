@@ -9,11 +9,21 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "@/css/*": ["app/styles/*"],
-      "@/fon/*": ["app/fonts/*"],
-      "@/cont/*": ["app/contexts/*"],
-      "@/comps/*": ["app/_components/*"],
-      "@/p/*": ["public/*"]
+      "@/css/*": [
+        "app/styles/*"
+      ],
+      "@/fon/*": [
+        "app/fonts/*"
+      ],
+      "@/cont/*": [
+        "app/contexts/*"
+      ],
+      "@/comps/*": [
+        "app/_components/*"
+      ],
+      "@/p/*": [
+        "public/*"
+      ]
     },
     "skipLibCheck": true,
     "strict": false,
@@ -32,9 +42,14 @@
     ]
   },
   "include": [
-    "next-env.d.ts", "app/_components/ui/Tasks.jsx", "app/_components/TaskList.jsx", "app/_components/reducer.jsx", ".next/types **/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types **/*.ts",
+    "app/_components/TaskList.jsx",
+    "app/_components/reducer.jsx",
+    "app/_components/ui/Tasks.jsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
