@@ -28,7 +28,7 @@ export function useTasksDispatch() {
   return useContext(TasksDispatchContext);
 }
 
-function tasksReducer(tasks, action) {
+function tasksReducer(tasks: any[], action: { type: string; id: any; text: any; task: { id: any; }; }) {
   switch (action.type) {
     case 'added': {
       return [...tasks, {
@@ -38,7 +38,7 @@ function tasksReducer(tasks, action) {
       }];
     }
     case 'changed': {
-      return tasks.map(t => {
+      return tasks.map((t: { id: any; }) => {
         if (t.id === action.task.id) {
           return action.task;
         } else {
@@ -47,7 +47,7 @@ function tasksReducer(tasks, action) {
       });
     }
     case 'deleted': {
-      return tasks.filter(t => t.id !== action.id);
+      return tasks.filter((t: { id: any; }) => t.id !== action.id);
     }
     default: {
       throw Error('Unknown action: ' + action.type);
