@@ -2,8 +2,9 @@ import { NextConfig } from "next";
 
 const config: NextConfig = {
     output: 'export',
-    // basePath: process.env.NODE_ENV === 'production' ? '/nxt_and_react' : '',
-    // images: {
+    basePath: process.env.NODE_ENV === 'production' ? '/nxt_and_react' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/nxt_and_react' : '',
+    images: {
     //     // domains: ['http://192.168.1.103:3000', 'http://localhost:3000', 'https://kashifakram.github.io/nxt_and_react'],
     //     remotePatterns: [
     //         {
@@ -14,7 +15,8 @@ const config: NextConfig = {
     //             search: ''
     //         }
     //     ]
-    // },
+    unoptimized: true,
+    },
     sassOptions: {
         additionalData: '$var: red;'
     }
